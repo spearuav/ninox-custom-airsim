@@ -37,7 +37,7 @@ namespace airlib
         real_T C_T = 0.109919f; // the thrust co-efficient @ 6396.667 RPM, measured by UIUC.
         real_T C_P = 0.040164f; // the torque co-efficient at @ 6396.667 RPM, measured by UIUC.
         real_T air_density = 1.225f; //  kg/m^3
-        real_T max_rpm = 7000.0f; // revolutions per minute
+        real_T max_rpm = 15000.0f; // revolutions per minute
         real_T propeller_diameter = 0.178f; //diameter in meters, default is for DJI Phantom 2
         real_T propeller_height = 1 / 100.0f; //height of cylindrical area when propeller rotates, 1 cm
         real_T control_signal_filter_tc = 0.005f; //time constant for low pass filter
@@ -45,7 +45,7 @@ namespace airlib
         real_T revolutions_per_second;
         real_T max_speed; // in radians per second
         real_T max_speed_square;
-        real_T max_thrust = 0.65f; //computed from above formula for the given constants
+        real_T max_thrust = 1.82f; //computed from above formula for the given constants
         real_T max_torque = 0.00865f; //computed from above formula
 
         // call this method to recalculate thrust if you want to use different numbers for C_T, C_P, max_rpm, etc.

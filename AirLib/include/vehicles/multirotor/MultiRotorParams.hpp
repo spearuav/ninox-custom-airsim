@@ -287,7 +287,7 @@ namespace airlib
             }
         }
 
-        static void `computeInertiaMatrix(Matrix3x3r& inertia, const Vector3r& body_box, const vector<RotorPose>& rotor_poses,
+        static void computeInertiaMatrix(Matrix3x3r& inertia, const Vector3r& body_box, const vector<RotorPose>& rotor_poses,
                                          real_T box_mass, real_T motor_assembly_weight)
         {
             inertia = Matrix3x3r::Zero();
@@ -327,8 +327,9 @@ namespace airlib
 
             // using rotor_param default, but if you want to change any of the rotor_params, call calculateMaxThrust() to recompute the max_thrust
             // given new thrust coefficients, motor max_rpm and propeller diameter.
-            params.rotor_params.calculateMaxThrust();
 
+            params.rotor_params.calculateMaxThrust();
+            
             //set up dimensions of core body box or abdomen (not including arms).
             params.body_box.x() = 0.180f;
             params.body_box.y() = 0.11f;
